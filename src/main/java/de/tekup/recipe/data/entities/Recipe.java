@@ -1,6 +1,7 @@
 package de.tekup.recipe.data.entities;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -36,6 +37,12 @@ public class Recipe {
 	private String directions;
 	
 	@OneToMany(mappedBy = "recipe")
-	List<Ingredient> ingredients;
+	List<Ingredient> ingredients = new ArrayList<>();
+
+	public void addIngredient(Ingredient ingredient) {
+		ingredient.setRecipe(this);
+		this.ingredients.add(ingredient);
+		
+	}
 
 }
