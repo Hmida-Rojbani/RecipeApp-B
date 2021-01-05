@@ -30,6 +30,12 @@ public class RecipeServiceImpl implements RecipeService {
 	@Override
 	public void deleteRecipeById(long id) {
 		reposRecipe.deleteById(id);
+		 
+	}
+
+	@Override
+	public void saveOrUpdate(Recipe recipe) {
+		reposRecipe.save(recipe);
 		
 	}
 

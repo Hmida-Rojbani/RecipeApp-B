@@ -9,4 +9,5 @@ public interface RecipeService {
 	List<Recipe> getRecipes();
 	Recipe getRecipeById(long id);
 	void deleteRecipeById(long id);
+	void saveOrUpdate(Recipe recipe);
 }
