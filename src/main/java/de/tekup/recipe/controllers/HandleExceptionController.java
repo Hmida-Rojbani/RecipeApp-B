@@ -21,5 +21,17 @@ public class HandleExceptionController {
 		
 		return modelAndView;
 	}
+	
+	@ExceptionHandler(NumberFormatException.class)
+	public ModelAndView handleNumberFormatException(NumberFormatException e) {
+		
+		ModelAndView modelAndView = new ModelAndView();
+		
+		modelAndView.setViewName("400error");
+		modelAndView.setStatus(HttpStatus.BAD_REQUEST);
+		modelAndView.addObject("exception",e);
+		
+		return modelAndView;
+	}
 
 }
