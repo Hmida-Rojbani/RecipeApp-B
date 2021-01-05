@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>404 Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{'/css/main.css'}">
+        <script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}">
+          
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    </head>
+    <body class="bg-purple">
+        
+        <div class="stars">
+            <div class="custom-navbar">
+			<div class="brand-logo">
+                    <img th:src="@{'/img/logo.svg'}" width="80px">
+                </div>
+                
+            </div>
+            <div class="central-body">
+                <img class="image-404" th:src="@{'/img/404.svg'}" width="300px">
+                <p class="alert alert-danger" th:text="${exception.getMessage()}"></p>
+                <a th:href="@{'/'}" class="btn-go-home">GO BACK HOME</a>
+            </div>
+            <div class="objects">
+                <img class="object_rocket" th:src="@{'/img/rocket.svg'}" width="40px">
+                <div class="earth-moon">
+                    <img class="object_earth" th:src="@{'/img/earth.svg'}" width="100px">
+                    <img class="object_moon" th:src="@{'/img/moon.svg'}" width="80px">
+                </div>
+                <div class="box_astronaut">
+                    <img class="object_astronaut" th:src="@{'/img/astronaut.svg'}" width="140px">
+                </div>
+            </div>
+            <div class="glowing_stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
