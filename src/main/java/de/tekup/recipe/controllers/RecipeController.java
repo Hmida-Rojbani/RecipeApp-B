@@ -41,6 +41,12 @@ public class RecipeController {
 		return "recipe/recipeform";
 	}
 	
+	@GetMapping("/recipe/new")
+	public String newRecipe(Model model) {
+		model.addAttribute("recipe",new RecipeRequest());
+		return "recipe/recipeform";
+	}
+	
 	@PostMapping("/recipe")
 	public String saveOrUpdate(@Valid @ModelAttribute("recipe") RecipeRequest request, BindingResult bindingResult) {
 		

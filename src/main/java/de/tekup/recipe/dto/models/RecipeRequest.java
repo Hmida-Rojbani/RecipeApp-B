@@ -19,10 +19,10 @@ public class RecipeRequest {
 	@Size(min=5,max=50)
 	private String description;
 
-	private LocalTime prepTime;
+	private LocalTime prepTime = LocalTime.of(0, 0);
 	
 	
-	private LocalTime cookTime;
+	private LocalTime cookTime = LocalTime.of(0, 0);
 	
 	@Positive
 	private Integer servings;
