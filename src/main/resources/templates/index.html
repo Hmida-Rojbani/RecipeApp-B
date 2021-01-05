@@ -59,7 +59,7 @@
 					  	     <td th:text="${recipe.description}"> Taste Gooood </td>
 					  	     <td> <a th:href="@{'/recipe/'+${recipe.id}+'/show'}" >View</a> 
 					  	     <td> <a href="#">Update</a> 
-					  	     <td> <a href="#">Delete</a> 
+					  	     <td> <a th:href="@{'/recipe/'+${recipe.id}+'/delete'}">Delete</a> 
 					  	</tr>
 					  </table>
 					 </div>

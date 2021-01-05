@@ -27,4 +27,10 @@ public class RecipeServiceImpl implements RecipeService {
 				.orElseThrow(()-> new NoSuchElementException("Recipe with this id is not found"));
 	}
 
+	@Override
+	public void deleteRecipeById(long id) {
+		reposRecipe.deleteById(id);
+		
+	}
+
 }
